@@ -1,0 +1,370 @@
+/*-------------------  FLEXIBLE BOX MODEL  -------------------*/
+/*
+The codes will work best in - IE 11, Opera 12.1+, Firefox 22+ Chrome 21+, and Safari 6+
+-webkit- prefix has been used for chrome and safari browser as chrome requires thhe prefix for browsers below version 28 and safari 3-6
+-moz- prefix has been used for mozilla firefox 
+-ms- has been used for IE 10
+-o- has been used for the opera browser, though i have not got concrete evidence if its used or not. so, for a safer side, i will use
+http://www.smashingmagazine.com/2013/05/22/centering-elements-with-flexbox/ - he is the main resource i got for older browsers
+
+if your browser is chrome<21, safari<6, IE<10 and firefox<22 the results may not be appropriate
+*/
+
+/*-------------------  Defining the flex container and its items  -------------------*/
+/*
+this basic flex container has been defined for every section
+it will contain display property, main axis will be the vertical axis (all flex items will be displayed in column)
+*/
+section[id^="flex-container"], [id="profile-sub"],  [id="portfolio-main"], [class^="abilities-container"], [class="contact-main"], [class="education-sub-profile"], [class="f1"] {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome and Safari */
+    display: -o-flex;          /* Old Opera */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    
+    -webkit-box-orient: vertical;       /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-orient: vertical;          /* OLD - Firefox 19- (buggy but mostly works) */
+    -webkit-flex-direction:column;
+    -moz-flex-direction:column;
+    -ms-flex-direction:column;
+    -o-flex-direction:column;
+    flex-direction:column;
+}
+
+#profile-sub {
+    -webkit-box-orient:horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction:row;
+    -moz-flex-direction:row;
+    -ms-flex-direction:row;
+    -o-flex-direction:row;
+    flex-direction:row;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack:justify;
+    -o-justify-content:space-between;
+    -ms-justify-content:space-between;
+    -moz-justify-content:space-between;
+    -webkit-justify-content:space-between;
+    justify-content:space-between;
+}
+
+.round-image, .f2 {
+    -ms-flex-item-align:center;
+    align-self:center;
+    -o-align-self:center;
+    -ms-align-self:center;
+    -moz-align-self:center;
+    -webkit-align-self:center;
+}
+
+.education-sub-profile {
+    -webkit-box-orient:horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction:row;
+    -moz-flex-direction:row;
+    -ms-flex-direction:row;
+    -o-flex-direction:row;
+    flex-direction:row;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack:justify;
+    -o-justify-content:space-between;
+    -ms-justify-content:space-between;
+    -moz-justify-content:space-between;
+    -webkit-justify-content:space-between;
+    justify-content:space-between;
+}
+
+.f1 {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome and Safari */
+    display: -o-flex;          /* Old Opera */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack:center;
+    -o-justify-content:center;
+    -ms-justify-content:center;
+    -moz-justify-content:center;
+    -webkit-justify-content:center;
+    justify-content:center;
+    -ms-flex-item-align:center;
+    align-self:center;
+    -o-align-self:center;
+    -ms-align-self:center;
+    -moz-align-self:center;
+    -webkit-align-self:center;
+}
+
+#portfolio-main {
+    -webkit-box-orient:horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -webkit-flex-direction:row;
+    -moz-flex-direction:row;
+    -ms-flex-direction:row;
+    -o-flex-direction:row;
+    flex-direction:row;
+    -webkit-box-lines:multiple;
+    -moz-box-lines:multiple;
+    -o-flex-wrap:wrap;
+    -ms-flex-wrap:wrap;
+    -moz-flex-wrap:wrap;
+    -webkit-flex-wrap:wrap;
+    flex-flow:wrap;
+    -ms-flex-align:center;
+    -moz-box-align:center;
+    -webkit-box-align:center;
+    -o-align-items:center;
+    -ms-align-items:center;
+    -moz-align-items:center;
+    -webkit-align-items:center;
+    align-items:center;
+    -ms-flex-pack:center;
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    -o-justify-content:center;
+     -ms-justify-content:center;
+     -moz-justify-content:center;
+     -webkit-justify-content: center;
+     justify-content:center; 
+    min-height:400px;
+}
+
+.abilities-container, .contact-main {
+    -webkit-box-orient:horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction:row;
+    -moz-flex-direction:row;
+    -ms-flex-direction:row;
+    -o-flex-direction:row;
+    flex-direction:row;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack:justify;
+    -o-justify-content:space-between;
+    -ms-justify-content:space-between;
+    -moz-justify-content:space-between;
+    -webkit-justify-content:space-between;
+    justify-content:space-between;
+}
+
+.contact-main {
+    -ms-flex-pack:distribute;
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    -o-justify-content:space-around;
+    -ms-justify-content:space-around;
+    -moz-justify-content:space-around;
+    -webkit-justify-content: space-around;
+    justify-content:space-around;
+}
+
+.abilities-container-inbox > li {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack:justify;
+    -o-justify-content:space-between;
+    -ms-justify-content:space-between;
+    -moz-justify-content:space-between;
+    -webkit-justify-content:space-between;
+    justify-content:space-between;
+    -webkit-box-orient:horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction:row;
+    -moz-flex-direction:row;
+    -ms-flex-direction:row;
+    -o-flex-direction:row;
+    flex-direction:row;
+    
+}
+
+.button {
+    -ms-flex-item-align:center;
+    align-self:center;
+    -o-align-self:center;
+    -ms-align-self:center;
+    -moz-align-self:center;
+    -webkit-align-self:center;
+}
+
+#flex-container-header {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome and Safari */
+    display: -o-flex;          /* Old Opera */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-orient: vertical;       /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-orient: vertical;          /* OLD - Firefox 19- (buggy but mostly works) */
+    -webkit-flex-direction:column;
+    -moz-flex-direction:column;
+    -ms-flex-direction:column;
+    -o-flex-direction:column;
+    flex-direction:column;
+    -ms-flex-align:center;
+    -moz-box-align:center;
+    -webkit-box-align:center;
+    -o-align-items:center;
+    -ms-align-items:center;
+    -moz-align-items:center;
+    -webkit-align-items:center;
+    align-items:center;
+    -ms-flex-pack:center;
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    -o-justify-content:center;
+     -ms-justify-content:center;
+     -moz-justify-content:center;
+     -webkit-justify-content: center;
+     justify-content:center;    
+}
+
+@media all and (max-width:640px) {
+    
+    #portfolio-main {
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction:column;
+        -moz-flex-direction:column;
+        -ms-flex-direction:column;
+        -o-flex-direction:column;
+        flex-direction:column;
+    }
+        
+    #portfolio-main {
+        -ms-flex-pack:distribute;
+        -webkit-box-pack:center;
+        -moz-box-pack:center;
+        -o-justify-content:space-around;
+        -ms-justify-content:space-around;
+        -moz-justify-content:space-around;
+        -webkit-justify-content: space-around;
+        justify-content:space-around;
+    }
+
+    
+    #profile-sub {
+        -webkit-box-orient:vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction:column;
+        -moz-flex-direction:column;
+        -ms-flex-direction:column;
+        -o-flex-direction:column;
+        flex-direction:column;
+        -ms-flex-pack:distribute;
+        -webkit-box-pack:center;
+        -moz-box-pack:center;
+        -o-justify-content:space-around;
+        -ms-justify-content:space-around;
+        -moz-justify-content:space-around;
+        -webkit-justify-content: space-around;
+        justify-content:space-around;
+    }
+    
+    .abilities-container, .interest-container-inbox > li, .contact-main {
+        -webkit-box-orient:vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction:column;
+        -moz-flex-direction:column;
+        -ms-flex-direction:column;
+        -o-flex-direction:column;
+        flex-direction:column;
+            
+    }  
+}
+
+
+
+
+
+/*-----------------------------------------------------------*/
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+
+
+@media all and (max-width:960px) {
+    
+    #profile-sub {
+        -ms-flex-pack:distribute;
+        -webkit-box-pack:center;
+        -moz-box-pack:center;
+        -o-justify-content:space-around;
+        -ms-justify-content:space-around;
+        -moz-justify-content:space-around;
+        -webkit-justify-content: space-around;
+        justify-content:space-around;
+        -webkit-box-lines:multiple;
+        -moz-box-lines:multiple;
+        -o-flex-wrap:wrap;
+        -ms-flex-wrap:wrap;
+        -moz-flex-wrap:wrap;
+        -webkit-flex-wrap:wrap;
+        flex-flow:wrap;
+    }
+    
+    
+    section [class="education-sub-profile"] {
+        -webkit-box-orient:vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction:column;
+        -moz-flex-direction:column;
+        -ms-flex-direction:column;
+        -o-flex-direction:column;
+        flex-direction:column;
+    }
+    
+}
+
+
+@media all and (min-width:640px) and (max-width:1025px) {
+    
+    #portfolio-main {
+        -ms-flex-pack:distribute;
+        -webkit-box-pack:center;
+        -moz-box-pack:center;
+        -o-justify-content:space-around;
+        -ms-justify-content:space-around;
+        -moz-justify-content:space-around;
+        -webkit-justify-content: space-around;
+        justify-content:space-around;
+    }
+    
+    .portfolio-sub {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-box-orient:horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction:row;
+        -moz-flex-direction:row;
+        -ms-flex-direction:row;
+        -o-flex-direction:row;
+        flex-direction:row;
+        -ms-flex-pack:center;
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    -o-justify-content:center;
+     -ms-justify-content:center;
+     -moz-justify-content:center;
+     -webkit-justify-content: center;
+     justify-content:center; 
+    }
+        
+
+}
+
+
+

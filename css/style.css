@@ -1,0 +1,1257 @@
+/*-----------------------------------  Removing the default browser settings  -----------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of default browser setting changes */
+
+/*-------------------  New Default Setting  -------------------*/
+
+body {
+    background-color: #D1DBD0;
+    color: #091928;
+}
+
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background-color:#f1f1f1;}
+::-webkit-scrollbar-thumb { background-color:#bcbcbc; border: 1px solid #f1f1f1;}
+::-webkit-scrollbar-thumb:hover { background-color:#aaaaab; }
+
+@font-face {
+    font-family: 'SinaNova';
+    src: url('../fonts/SinaNova.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GenBasR';
+    src: url('../fonts/GenBasR.ttf') format('TrueType');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GenBasB';
+    src: url('../fonts/GenBasB.ttf') format('TrueType');
+    font-weight:bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand.otf') format('OpenType');
+    font-weight:normal;
+    font-style: normal;
+}
+
+/*-------------------  Header Styling  -------------------*/
+
+#flex-container-header {
+    width:100%;
+    background-color: #091928;
+    border: 1px solid white inset;
+    height:100vh;
+}
+
+#flex-container-header:before {
+    border: 1px solid #FFFFFF;
+    bottom: 30px;
+    content: "";
+    left: 30px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.horizontal-line {
+    margin-top:1em;
+    margin-bottom:1em;
+    height: 0.2em;
+    width:25%;
+    background-color:#D1DBD0;
+}
+
+header [class^="header-"] {
+    font-family:SinaNova;
+    font-size: 5em;
+    color: #D1DBD0;
+    text-align:center;
+}
+
+header [class$="name"] {
+    margin-top:0%;
+}
+
+header [class$="sub"] {
+    font-size:2em;
+}
+
+/*-------------------  Universal Body Styling  -------------------*/
+
+#flex-container-profile, #flex-container-education, #flex-container-experience, #flex-container-portfolio, #flex-container-abilities, #flex-container-interest, #flex-container-contact {
+    padding: 2% 15% 3%;
+}
+
+.body-rule {
+    margin: 2em 0 2em;
+    height: 0.1em;
+    background-color: #091928;
+}
+
+section [class^="body-topic"] {
+    font-family:SinaNova;
+    font-size:4em;
+    color: #091928;
+    text-align: center;
+}
+
+.body-topic {
+    padding: 0.2em 0 0.1em;
+}
+
+section [class$="sub-education"] {
+    font-size:1.9em;
+    line-height:1.2em;
+}
+
+section [class$="sub"] {
+    font-size:2em;
+    line-height:1.2em;
+}
+
+.location-color {
+    color: #005763;
+    font-size:0.9em;
+}
+
+/*-------------------  Profile Styling  -------------------*/
+
+#flex-container-profile {
+    background-color:white;
+    padding: 2% 15% 3%;
+}
+
+.about {
+    width:40%;
+    text-align:justify;
+    font-family:GenBasR;
+    font-size:1.2em;
+    line-height:1.5em;
+}
+
+.profile-sub {
+    margin-top: 2%;
+    margin-bottom:5%;
+}
+
+.round-image {
+    border-radius:50%;
+    height:150px;
+    width:150px;
+}
+
+.profile-about-title {
+    font-family:SinaNova;
+    font-size: 2em;
+    color: #22A39F;
+}
+
+.details {
+    width: 25%;
+}
+
+.profile-list > li {
+    font-family:GenBasR;
+    font-size:1.2em;
+    line-height:1.5em;
+}
+
+.profile-list-sub {
+    font-family:GenBasB;
+    font-weight:bold;
+}
+
+/*-------------------  Education Styling  -------------------*/
+
+#flex-container-education {
+    padding: 2% 15% 3%;
+}
+
+#education-sub {
+    font-family:GenBasR;
+    font-size:1.2em;
+    line-height:1.5em;
+}
+
+.education-sub-profile {
+    margin-bottom:1.5em;
+}
+
+.education-sub-profile:last-child {
+    margin:0;
+}
+.education-sub-name {
+    font-family:GenBasB;
+    font-weight:bold;
+}
+
+.education-sub-description {
+    width:60%;
+    text-align:justify;
+}
+
+.education-sub-description > ul > li:last-child{
+    padding-top:0.5em;
+}
+
+/*-------------------  Experience Styling  -------------------*/
+
+#flex-container-experience {
+    background-color:white;
+    padding: 2% 15% 3%;
+}
+
+/*-------------------  Portfolio Styling  -------------------*/
+
+#flex-container-portfolio {
+    padding: 2% 15% 3%;
+}
+
+.portfolio-sub {
+    padding:0 0.25em 0;
+}
+
+/*-----------------------------------------------------------------*/
+.container {
+    position:relative;
+    width:292px;
+    height:170px;
+    perspective: 400px;
+    -o-perspective: 400;
+    -ms-perspective: 400px;
+    -moz-perspective: 400px;
+    -webkit-perspective: 400;
+    margin-bottom:1em;
+}
+
+.container:last-child {
+    margin-bottom:0;
+}
+
+#card-container {
+    width:100%;
+    height:100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 1.0s ease-in-out;
+    -moz-transition: all 1.0s ease-in-out;
+    -ms-transition: all 1.0s ease-in-out;
+    -o-transition: all 1.0s ease-in-out;
+    transition: all 1.0s ease-in-out;
+    box-shadow: 1px 1px 5px 1px #091928;
+    -o-box-shadow: 1px 1px 5px 1px #091928;
+    -ms-box-shadow: 1px 1px 5px 1px #091928;
+    -moz-box-shadow: 1px 1px 5px 1px #091928;
+    -webkit-box-shadow: 1px 1px 5px 1px #091928;
+}
+
+.container:hover #card-container{
+    transform: translateZ(120px) rotateY(180deg);
+    -webkit-transform: translateZ(120px) rotateY(180deg);
+    -moz-transform: translateZ(120px) rotateY(180deg);
+    -ms-transform: translateZ(120px) rotateY(180deg);
+    -o-transform: translateZ(120px) rotateY(180deg);
+    box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    z-index: 1001;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.fliptext {
+    font-size:24px;
+}
+.face.back {
+    display:block;
+    text-align:center;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Quicksand;
+    padding:10px;
+    color:white;
+    font-size:15px;
+    line-height:16px;
+    background-color:#091928;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*-------------------  Abilities Styling  -------------------*/
+
+#flex-container-abilities {
+    background-color:white;
+    padding: 2% 15% 3%;
+}
+
+.abilities-container > ul {
+    margin-top:0.5em;
+    width:45%;
+    line-height:1.5em;
+    padding:0 0.2em 0 0.2em;
+    font-family:GenBasR;
+    font-size:1.2em;
+    letter-spacing:normal;
+}
+
+.profile-about-title {
+    margin-bottom:2%;
+}
+
+section [class^="star"] {
+    font-size: 0.9em;
+    width:30%;
+    text-align:right;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.star {
+    color:#22A39F;
+}
+
+.unapp {
+    color:gray;
+    text-align:right;
+}
+
+.abilities-container-inbox > li:hover  {
+    background-color:#D1DBD0;
+}
+
+.abilities-container-inbox > li:hover section[class^="star"]{
+     letter-spacing:0.15em;
+}
+
+.button {
+    margin-top:1em;
+    text-decoration:none;
+    font-family:SinaNova;
+    padding:0.2em 0.5em;
+    font-size:1.2em;
+    line-height:1.8em;
+    background-color: #091928;
+    border-radius:5px;
+    color: #D1DBD0;
+    text-align:center;
+}
+
+/*-------------------  Interest Styling  -------------------*/
+
+#flex-container-interest {
+    background-color:#f3efe0;
+    padding: 2% 15% 3%;
+}
+
+.interest-container-inbox > li {
+    line-height:1.5em;
+    padding:0;
+    font-family:GenBasR;
+    font-size:1.2em;
+    letter-spacing:normal;
+}
+
+.f2 {
+    text-align:justify;
+    width:72%;
+}
+
+.image-music, .image-movie, .image-book {
+    background-color:deepskyblue;
+    width:13em;
+    height:13em;;
+    border-radius:50%;
+    transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.image-music {
+    background-color: #a4b4a2; 
+}
+
+.image-movie {
+    background-color: #89a9c7;
+}
+
+.image-book {
+    background-color: #1d939f; 
+}
+
+.education-sub-profile:hover .image-music {
+    transform:rotateZ(20deg);
+    -ms-transform:rotateZ(20deg);
+    -moz-transform:rotateZ(20deg);
+    -webkit-transform:rotateZ(20deg);
+}
+
+.education-sub-profile:hover .image-movie {
+    transform:rotateZ(20deg);
+    -ms-transform:rotateZ(-20deg);
+    -moz-transform:rotateZ(-20deg);
+    -webkit-transform:rotateZ(20deg);
+}
+
+.education-sub-profile:hover .image-book {
+    transform:rotateZ(-20deg);
+    -ms-transform:rotateZ(-20deg);
+    -moz-transform:rotateZ(-20deg);
+    -webkit-transform:rotateZ(-20deg);
+}
+
+.interest-about-title {
+    font-family:SinaNova;
+    font-size: 2em;
+    color: #22A39F;
+    margin-bottom:-1.5em;
+}
+
+
+/*-------------------  Contact Styling  -------------------*/
+
+#flex-container-contact {
+    padding: 2% 15% 2%;
+    background-color: #091928;
+    height:90vh;
+}
+
+#flex-container-contact > section[class^="body"] {
+    color: #D1DBD0;
+}
+
+.contact-division {
+    font-family:SinaNova;
+    font-size:1.2em;
+    color: #D1DBD0;
+    padding:0.5em;
+}
+
+.contact-division > li {
+    vertical-align:middle;
+    margin-bottom: 1em;
+}
+
+.contact-division > li > a > img{
+    padding-right:0.5em;
+    vertical-align:middle;
+}
+
+.contact-division > li > a {
+    text-decoration:none;
+    font-family:SinaNova;
+    font-size:1em;
+    color: #D1DBD0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------*/
+/* smartphones, iPhone, portrait 480x320 phones */ 
+
+@media all and (max-width:640px) {
+    
+    /*------------------ Header Section -----------------*/
+    
+    #flex-container-header:before {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        top: 10px;
+    }
+    
+    .horizontal-line {
+        margin-top:0.25em;
+        margin-bottom:0.25em;
+        height: 0.05em;
+    }
+    
+    header [class^="header-"] {
+        font-size: 2em;
+    }
+    
+    header [class$="sub"] {
+        font-size:1em;
+    }
+    
+    /*--------------universal styling ---------------*/
+    
+    #flex-container-profile, #flex-container-education, #flex-container-experience, #flex-container-portfolio, #flex-container-abilities, #flex-container-interest, #flex-container-contact {
+        padding: 2% 3% 3%;
+    }
+    
+    section [class^="body-topic"] {
+        font-size:2em;
+    }
+    .body-rule {
+        margin: 0.5em 0 0.5em;
+    }
+    
+    section [class$="sub-education"] {
+        font-size:1.3em;
+        line-height:1.2em;
+    }
+    
+    section [class$="sub"] {
+        font-size:1.2em;
+        line-height:1.2em;
+    }
+    
+    .location-color {
+        font-size:0.8em;
+    }
+    .education-sub-description > ul >li >img {
+            height:12px;
+            width:7px;
+    }
+    
+    /*---------------------profile-----------------------*/
+
+    .about {
+        width:100%;
+        font-size:1em;
+        line-height:1.2em;
+    }
+    
+    .profile-sub {
+        margin-top: 2%;
+        margin-bottom:5%;
+    }
+    
+    .round-image {
+        padding:0.6em;
+        height:100px;
+        width:100px;
+    }
+    
+    .profile-about-title {
+        text-align:center;
+        font-size: 1.5em;
+    }
+    
+    .details {
+        text-align:center;
+        width: 100%;
+    }
+    
+    .profile-list > li {
+        font-size:1em;
+        line-height:1.2em;
+    }
+    
+    /*-------------------  Education Styling  -------------------*/
+
+    #education-sub {
+        font-size:1em;
+        line-height:1.2em;
+    }
+    
+    .education-sub-description {
+        border-top:1px dashed black;
+        margin-top:0.5em;
+        width:100%;
+    }
+    
+    .education-sub-description > ul > li:last-child {
+        padding-top:0.5em;
+    }
+    
+    .container {
+        width:200px;
+        height:130px;
+    }
+    
+    .face > img {
+        width:200px;
+        height:130px;
+    }
+        
+    .portfolio-sub {
+        margin-bottom:1em;
+    }
+    
+    .portfolio-sub:last-child {
+        margin-bottom:0em;
+    }
+    
+    /*-------------------  Abilities Styling  -------------------*/
+
+    .abilities-container > ul {
+        margin-top:0em;
+        width:100%;
+        line-height:1.2em;
+        padding:0 0.2em 0 0.2em;
+        font-size:1em;
+    }
+    
+    .button {
+        margin-top:0.5em;
+        padding:0.2em 0.5em;
+        font-size:1em;
+        line-height:1.5em;
+    }
+    
+    /*-------------------  Interest Styling  -------------------*/
+
+    .interest-container-inbox > li {
+        line-height:1.2em;
+        font-size:1em;
+        padding:0.5em;
+        border-top:1px dashed black;
+    }
+    
+    .interest-container-inbox > li:first-child {
+        border-top:0;
+    }
+    
+    .text {
+        width:100%;
+    }
+    
+    section [class^="image"] {
+        visibility:hidden;
+        height:0;
+    }
+    
+    .interest-about-title {
+        font-size: 1.5em;
+        margin-bottom:-0.5em;
+    }
+    
+    .face.back {
+    padding:10px;
+    color:white;
+    font-size:12px;
+    line-height:1.2em;
+}
+    
+    /*-------------------  Contact Styling  -------------------*/
+
+    .contact-division {
+        font-size:1em;
+    }
+    
+    .contact-division > li > a > img{
+        height:20px;
+        width:20px;
+    }
+    
+    .contact-division > li:last-child {
+        margin-bottom: 0em;
+    }
+    .contact-main {
+        align-self:center;
+    }
+
+}
+
+
+
+
+
+/*-----------------------------------------------------------*/
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+@media all and (min-width:320px) and (max-width:480px) {
+    
+    /*------------------ Header Section -----------------*/
+    #flex-container-header:before {
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        top: 15px;
+    }
+    
+    .body-rule {
+        margin: 0.5em 0 0.5em;
+    }
+    
+    .horizontal-line {
+        margin-top:0.5em;
+        margin-bottom:0.75em;
+        height: 0.05em;
+    }
+    
+    header [class^="header-"] {
+        font-size: 2.5em;
+    }
+    
+    header [class$="sub"] {
+        font-size:1.3em;
+    }
+    
+    .details {
+        text-align:left;
+        width: 50%;
+    }
+    /*-------------------  Abilities Styling  -------------------*/
+
+    .abilities-container > ul {
+        align-self:center;
+        width:70%;
+    }  
+    
+    .contact-main {
+        align-self:center;
+        padding: 0 1em 0;
+    }
+    
+    
+}
+
+
+/*-----------------------------------------------------------*/
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+@media all and (min-width:481px) and (max-width:640px) {
+    #flex-container-header:before {
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        top: 20px;
+    }
+    
+    .horizontal-line {
+        margin-top:0.5em;
+        margin-bottom:0.75em;
+        height: 0.05em;
+    }
+    
+    .body-rule {
+        margin: 1em 0 1em;
+    }
+    
+    header [class^="header-"] {
+        font-size: 2.75em;
+    }
+    
+    header [class$="sub"] {
+        font-size:1.5em;
+    }
+    
+    /*--------------universal styling ---------------*/
+    
+    section [class^="body-topic"] {
+        font-size:2.75em;
+    }
+    .body-rule {
+        margin: 1em 0 1em;
+    }
+    
+    section [class$="sub-education"] {
+        font-size:1.5em;
+        line-height:1.2em;
+    }
+    
+    section [class$="sub"] {
+        font-size:1.3em;
+        line-height:1.2em;
+    }
+    
+    .location-color {
+        font-size:0.8em;
+    }
+    .education-sub-description > ul >li >img {
+            height:12px;
+            width:7px;
+    }
+    
+    /*---------------------profile-----------------------*/
+
+    .about {
+        width:100%;
+        font-size:1.1em;
+        line-height:1.2em;
+    }
+    
+    .profile-sub {
+        margin-top: 2%;
+        margin-bottom:5%;
+    }
+    
+    .round-image {
+        padding:0.6em;
+        height:130px;
+        width:130px;
+    }
+    
+    .profile-about-title {
+        text-align:center;
+        font-size: 1.8em;
+    }
+    
+    .details {
+        text-align:left;
+        width: 40%;
+    }
+    
+    /*-------------------  Education Styling  -------------------*/
+
+    #education-sub {
+        font-size:1.1em;
+        line-height:1.25em;
+    }
+    
+    .education-sub-description {
+        border-top:1px dashed black;
+        margin-top:0.5em;
+        width:100%;
+    }
+    
+    .education-sub-description > ul > li:last-child {
+        padding-top:0.5em;
+    }
+    
+    .container {
+        width:200px;
+        height:130px;
+    }
+    
+    .face > img {
+        width:200px;
+        height:130px;
+    }
+        
+    .portfolio-sub {
+        margin-bottom:1em;
+    }
+    
+    .portfolio-sub:last-child {
+        margin-bottom:0em;
+    }
+    
+    /*-------------------  Abilities Styling  -------------------*/
+
+    .abilities-container > ul {
+        align-self:center;
+        width:70%;
+        line-height:1.4em;
+        font-size:1.1em;
+    }
+    
+    section [class^="image"] {
+        width:5em;
+        height:5em;;
+        border-radius:50%;
+    }
+    
+    /*-------------------  Contact Styling  -------------------*/
+
+    .contact-division {
+        font-size:1em;
+    }
+    
+    .contact-division > li > a > img {
+        height:20px;
+        width:20px;
+    }
+    
+    .contact-division > li:last-child {
+        margin-bottom: 0em;
+    }
+    .contact-main {
+        align-self:center;
+        padding: 0 2em 0;
+    }
+    
+    .round-image, .f1 {
+        visibility:hidden;
+    }
+    
+    .f1 {
+        max-height:0px;
+    }
+    
+}
+
+
+
+
+
+
+
+/*-----------------------------------------------------------*/
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+
+
+@media all and (min-width:641px) and (max-width:960px) {
+    
+    .horizontal-line {
+        margin-top:0.75em;
+        margin-bottom:0.75em;
+    }
+    
+    header [class^="header-"] {
+        font-size: 3.3em;
+    }
+    
+    header [class$="sub"] {
+        font-size:1.75em;
+    }
+    
+    /*--------------universal styling ---------------*/
+    
+    #flex-container-profile, #flex-container-education, #flex-container-experience, #flex-container-portfolio, #flex-container-abilities, #flex-container-interest, #flex-container-contact {
+        padding: 2% 5% 3%;
+    }
+    
+    section [class^="body-topic"] {
+        font-size:3.5em;
+    }
+    .body-rule {
+        margin: 1.5em 0 1.5em;
+    }
+    
+    section [class$="sub-education"] {
+        font-size:1.5em;
+        line-height:1.2em;
+    }
+    
+    section [class$="sub"] {
+        font-size:1.6em;
+        line-height:1.6em;
+    }
+    
+    .location-color {
+        font-size:0.8em;
+    }
+    .education-sub-description > ul >li >img {
+            height:12px;
+            width:7px;
+    }
+    
+    /*---------------------profile-----------------------*/
+
+    .about {
+        width:100%;
+        font-size:1.1em;
+        line-height:1.2em;
+    }
+    
+    .round-image {
+        padding:0.6em;
+        height:150px;
+        width:150px;
+    }
+    
+    .profile-about-title {
+        font-size: 1.8em;
+    }
+    
+    .details {
+        width: 50%;
+    }
+        
+    .profile-list > li {
+        font-size:1.2em;
+        line-height:1.5em;
+    }
+    
+    .profile-list-sub {
+        font-family:GenBasB;
+        font-weight:bold;
+    }
+    
+    /*-------------------  Education Styling  -------------------*/
+
+    #education-sub {
+        font-size:1.2em;
+        line-height:1.3em;
+    }
+    
+    .education-sub-description {
+        border-top:1px dashed black;
+        margin-top:0.5em;
+        width:100%;
+    }
+    
+    .container {
+        width:240px;
+        height:150px;
+        margin:0.5em;
+    }
+    
+    .face > img {
+        width:240px;
+        height:150px;
+    }
+    
+    
+
+    /*-------------------  Interest Styling  -------------------*/
+    
+    .interest-container-inbox > li {
+        line-height:1.5em;
+        padding:0;
+        font-family:GenBasR;
+        font-size:1.2em;
+        letter-spacing:normal;
+    }
+    
+    .text {
+        text-align:justify;
+        width:72%;
+    }
+    
+    section [class^="image"] {
+        width:8em;
+        height:8em;;
+        border-radius:50%;
+    }
+    
+    .interest-about-title {
+        font-size: 1.2em;
+        line-height:1.3em;
+        margin-bottom:-1em;
+    }
+    
+    section [class$="music"] >img{
+        width:100px;
+        height:100px;
+    }
+    
+    .contact-division {
+        padding:0em;
+    }
+    
+    .round-image, .f1 {
+        visibility:hidden;
+    }
+    
+    .f1 {
+        max-height:0px;
+    }
+}
+
+
+/*-----------------------------------------------------------*/
+/* big landscape tablets, laptops, and desktops */
+
+@media all and (min-width: 961px) and (max-width:1025px) {
+    
+    #flex-container-profile, #flex-container-education, #flex-container-experience, #flex-container-portfolio, #flex-container-abilities, #flex-container-interest, #flex-container-contact {
+        padding: 2% 10% 3%;
+    }
+    
+    section [class^="body-topic"] {
+        font-size:3.75em;
+    }
+    .body-rule {
+        margin: 1.75em 0 1.75em;
+    }
+    
+    section [class$="sub-education"] {
+        font-size:1.75em;
+        line-height:1.2em;
+    }
+    
+    section [class$="sub"] {
+        font-size:1.8em;
+        line-height:1.2em;
+    }
+    
+    .location-color {
+        font-size:0.95em;
+    }
+    
+    section [class^="image"] {
+        width:9.5em;
+        height:9.5em;;
+        border-radius:50%;
+    }
+    
+    .profile-about-title {
+        font-size: 1.8em;
+    }
+
+        
+    .profile-list > li {
+        font-size:1.2em;
+        line-height:1.5em;
+    }
+    
+    .container {
+        width:240px;
+        height:150px;
+        margin:0.5em;
+    }
+    
+    .face > img {
+        width:240px;
+        height:150px;
+    }
+    
+    
+}
+
+@media all and (min-width: 1026px) and (max-width:1281px) {
+    
+    #flex-container-profile, #flex-container-education, #flex-container-experience, #flex-container-abilities, #flex-container-interest, #flex-container-contact, #flex-container-portfolio {
+        padding: 2% 8% 3%;
+    }
+    
+    section [class^="body-topic"] {
+        font-size:3.75em;
+    }
+    .body-rule {
+        margin: 1.75em 0 1.75em;
+    }
+    
+    section [class$="sub-education"] {
+        font-size:1.75em;
+        line-height:1.2em;
+    }
+    
+    section [class$="sub"] {
+        font-size:1.9em;
+        line-height:1.6em;
+    }
+    
+    .location-color {
+        font-size:0.95em;
+    }
+    
+    .abilities-container > ul {
+        font-size:1.2em;
+    }
+    
+    section [class^="image"] {
+        width:11em;
+        height:11em;;
+        border-radius:50%;
+    }
+    
+    .profile-about-title {
+        font-size: 1.8em;
+    }
+
+        
+    .profile-list > li {
+        font-size:1.2em;
+        line-height:1.5em;
+    }
+    
+    .container {
+        width:270px;
+        height:170px;
+        margin:0.5em;
+        margin-bottom:1.5em;
+    }
+    
+    .face > img {
+        width:270px;
+        height:170px;
+    }
+    
+}
+
+
+@media all and (min-width: 1282px) {
+    
+    #flex-container-profile, #flex-container-education, #flex-container-experience, #flex-container-abilities, #flex-container-interest, #flex-container-contact {
+        padding: 2% 12% 3%;
+    }
+    #flex-container-portfolio {
+        padding: 2% 10% 3%;
+    }
+    .container {
+        width:290px;
+        height:170px;
+        margin:0.5em;
+        margin-bottom:1.5em;
+    }
+    
+    .rule-extra {
+        margin: 2em 1em 2em;
+        height: 0.1em;
+        background-color: #091928;
+    }
+    
+    .face > img {
+        width:290px;
+        height:170px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
