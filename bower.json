@@ -1,0 +1,34 @@
+{
+    "name": "personal-webpage",
+    "description": "Personal WebPage",
+    "main": [
+        "main.js",
+        "style.less"
+    ],
+    "overrides":{
+        "bootstrap": {
+            "main": [
+                "less/bootstrap.less",
+                "dist/css/bootstrap.css",
+                "dist/js/bootstrap.js"
+            ]
+        }
+    },
+    "authors": [
+        "Ujjawal"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/11Ujjawal/11Ujjawal.github.io",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "^2.2.4",
+        "angular": "^1.5.5",
+        "bootstrap": "^3.3.6"
+    }
+}
