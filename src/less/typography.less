@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'SinaNova';
+	src: url('@{font-path}@{header-font-name}.otf');
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('@{font-path}@{body-font-name}.ttf');
+}
+.jumbo-text {
+	font-family: SinaNova, serif;
+	font-size: ceil((@font-size-base * 5));
+}
+nav {
+	font-family: Roboto;
+	font-size: ceil((@font-size-base * 1.15));
+	word-spacing: @font-size-base;
+	letter-spacing: floor((@font-size-base * 0.15));
+}

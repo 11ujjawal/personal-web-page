@@ -1,0 +1,53 @@
+@keyframes index {
+	from {
+		opacity: 0;
+		height: 90vh;
+		margin-top: 10vh;
+	}
+	to {
+		opacity: 1;
+		height: 100vh;
+		margin-top: 0;
+	}
+}
+@keyframes social-in {
+	from {
+		opacity: 0.8;
+		transform: scale(1);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+}
+.wrapper {
+	.alignY();
+	height: @viewport-height;
+	width: @viewport-width;
+	background-color: @bg-base;
+	animation: index 2s ease forwards;
+}
+footer {
+	.alignY();
+	height: 20vh;
+	width: 100vw;
+	position: fixed;
+	margin-top: -20vh;
+}
+.jumbo-text {
+	color: @text-base;
+}
+.navbar-brand {
+	color: @text-base;
+	opacity: 0.8;
+
+	&:hover, &:focus {
+		color: darken(@text-base, 10%);
+		background-color: lighten(@bg-base, 20%) !important;
+	}
+	& > *:hover {
+		transform: scale(1.2);
+		transition: transform 0.3s;
+		opacity: 1;
+	}
+}
