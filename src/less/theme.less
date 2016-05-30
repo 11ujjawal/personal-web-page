@@ -1,47 +1,38 @@
-@keyframes index {
-	from {
-		opacity: 0;
-		height: 90vh;
-		margin-top: 10vh;
-	}
-	to {
-		opacity: 1;
-		height: 100vh;
-		margin-top: 0;
-	}
-}
-@keyframes social-in {
-	from {
-		opacity: 0.8;
-		transform: scale(1);
-	}
-	to {
-		opacity: 1;
-		transform: scale(1.2);
-	}
-}
-.wrapper {
-	.alignY();
+/** Common setting */
+.viewport-default {
 	height: @viewport-height;
 	width: @viewport-width;
-	background-color: @bg-base;
-	animation: index 2s ease forwards;
 }
-footer {
-	.alignY();
+.viewport-eighty {
+	height: @viewport-height * 0.8;
+	width: @viewport-width;
+}
+.wrapper {
+	height: inherit;
+	padding: 5px 0px 20px;
+	width: @viewport-width * 0.8;
+}
+body {
+	.viewport-default();
+	background-color: @bg-base;
+}
+hr {
+	border: 0px;
+	height: ceil((@font-size-base * 0.1));
+}
+/** End common setting */
+/** Index Page  */
+.index-footer {
 	height: 20vh;
 	width: 100vw;
 	position: fixed;
 	margin-top: -20vh;
 }
-.jumbo-text {
-	color: @text-base;
-}
 .navbar-brand {
 	color: @text-base;
 	opacity: 0.8;
-
-	&:hover, &:focus {
+	&:focus,
+	&:hover {
 		color: darken(@text-base, 10%);
 		background-color: lighten(@bg-base, 20%) !important;
 	}
@@ -51,3 +42,22 @@ footer {
 		opacity: 1;
 	}
 }
+/** End Index Page */
+/** Me Page */
+.me {
+	& > .section-left,
+	.section-right {
+		height: inherit;
+		width: @viewport-width/2;
+	}
+	& > .section-right {
+		background-color: darken(@text-base, 5%);
+	}
+	& .navbar {
+		margin-top: -4vh;
+	}
+	& a:hover, :active {
+		text-decoration: none;
+	}
+}
+/** End Me Page */

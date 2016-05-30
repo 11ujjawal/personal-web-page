@@ -3,14 +3,27 @@
 	align-items: center;
 	justify-content: center;
 }
-.alignX() {
+.align-x {
 	.init();
 	flex-direction: row;
 }
-.alignY() {
+.align-y {
 	.init();
 	flex-direction: column;
 }
-.alignBottom() {
-	align-self: baseline;
+.align-x-top {
+	.align-x;
+	align-items: flex-start;
+}
+.align-y-top {
+	.align-y;
+	align-items: flex-start;
+}
+.align-x-justify {
+	.align-x;
+	justify-content: space-between;
+}
+.align-x-top-justify {
+	.align-x-justify;
+	align-items: flex-start;
 }

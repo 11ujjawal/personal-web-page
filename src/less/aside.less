@@ -1,0 +1,17 @@
+@keyframe mind {
+	from {
+		width: 0;
+	}
+	to {
+		width : 100%;
+	}
+}
+.me {
+	& #mind:hover {
+		content: "";
+		width: 100vh;
+		height: 100vh;
+		background-color: red;
+		animation: mind 4s ease;
+	}
+}

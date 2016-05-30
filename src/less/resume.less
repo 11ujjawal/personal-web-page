@@ -1,0 +1,55 @@
+/** Resume Start */
+.resume {
+	& .resume-header {
+		display: flex;
+		position: absolute;
+		margin: 40px;
+		height: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border: 3px solid @text-base;
+	}
+
+	& .profile {
+		color: @text-lighter;
+		background-color:@bg-shade-1;
+
+		& hr {
+			background-color: @text-lighter;
+		}
+
+		& .profile-message {
+			width: 40%;
+		}
+
+		& .profile-image {
+			border-radius: 50%;
+		}
+
+		& .profile-details {
+			width: 20%;
+			text-align:left;
+		}
+	}
+
+	& .education {
+		color: @text-shade-1;
+		background-color: lighten(@bg-shade-2, 10%);
+
+		& hr {
+			background-color: @text-shade-1;
+		}
+
+		& .e-title {
+			width: 30%;
+		}
+
+		& .e-details {
+			width: 60%;
+		}
+	}
+
+}
+/** Resume End */

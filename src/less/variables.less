@@ -1,6 +1,10 @@
 /** Background Color Codes */
 @bg-base: #fcfff5;
+@bg-shade-1: #10222B;
+@bg-shade-2: #468966;
 @text-base: #193441;
+@text-shade-1: darken(@text-base, 10%);
+@text-lighter: #E2F0D6;
 
 /** Height and width of the device */
 @viewport-height: 100vh;
@@ -9,6 +13,34 @@
 /** Font family */
 @font-path: "../fonts/";
 @header-font-name: "SinaNova";
-@body-font-name: "Roboto-Light";
+@body-font-name-light: "Roboto-Light";
+@body-font-name-dark: "Roboto-Black";
+@body-font-cursive-light: "GenBasR";
+@body-font-cursive-dark: "GenBasB";
 
 @font-size-base: 16px;
+
+@font-size-jumbo-1: ceil((@font-size-base * 8));
+@font-size-jumbo-2: ceil((@font-size-base * 7));
+@font-size-jumbo-3: ceil((@font-size-base * 6));
+@font-size-jumbo-4: ceil((@font-size-base * 5));
+@font-size-jumbo-5: ceil((@font-size-base * 4.4));
+@font-size-jumbo-6: ceil((@font-size-base * 3.5));
+@font-size-jumbo-7: ceil((@font-size-base * 3));
+@font-size-jumbo-8: ceil((@font-size-base * 2.5));
+@font-size-jumbo-9: ceil((@font-size-base * 2.1));
+@font-size-jumbo-10: ceil((@font-size-base * 1.7));
+
+@font-size-1: floor((@font-size-base * 2.6)); // ~36px
+@font-size-2: floor((@font-size-base * 2.15)); // ~30px
+@font-size-3: ceil((@font-size-base * 1.7)); // ~24px
+@font-size-4: ceil((@font-size-base * 1.4)); // ~18px
+@font-size-5: ceil((@font-size-base * 1.25)); // ~18px
+@font-size-6: ceil((@font-size-base * 1)); // ~12px
+
+@font-size-var: "font-size-";
+
+@screen-xs: 480px;
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;

@@ -3,16 +3,197 @@
 	src: url('@{font-path}@{header-font-name}.otf');
 }
 @font-face {
-	font-family: 'Roboto';
-	src: url('@{font-path}@{body-font-name}.ttf');
+	font-family: 'Roboto Light';
+	src: url('@{font-path}@{body-font-name-light}.ttf');
 }
-.jumbo-text {
+@font-face {
+	font-family: 'Roboto dark';
+	src: url('@{font-path}@{body-font-name-dark}.ttf');
+}
+@font-face {
+	font-family: 'GenBas Regular';
+	src: url('@{font-path}@{body-font-cursive-light}.ttf');
+}
+@font-face {
+	font-family: 'GenBas Bold';
+	src: url('@{font-path}@{body-font-cursive-dark}.ttf');
+}
+/** Text configuration for headers */
+.text-jumbo-heavy-lg {
 	font-family: SinaNova, serif;
-	font-size: ceil((@font-size-base * 5));
+	font-size: @font-size-jumbo-3;
+	@media (min-width: @screen-md) and (max-width: @screen-lg) {
+		font-size: @font-size-jumbo-4;
+	}
+	@media (min-width: @screen-sm) and (max-width: @screen-md) {
+		font-size: @font-size-jumbo-5;
+	}
+	@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+		font-size: @font-size-jumbo-6;
+	}
+	@media (max-width: @screen-xs) {
+		font-size: @font-size-jumbo-7;
+	}
 }
-nav {
-	font-family: Roboto;
-	font-size: ceil((@font-size-base * 1.15));
-	word-spacing: @font-size-base;
+.text-jumbo-heavy-md {
+	font-family: SinaNova, serif;
+	font-size: @font-size-jumbo-5;
+	@media (min-width: @screen-md) and (max-width: @screen-lg) {
+		font-size: @font-size-jumbo-5;
+	}
+	@media (min-width: @screen-sm) and (max-width: @screen-md) {
+		font-size: @font-size-jumbo-6;
+	}
+	@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+		font-size: @font-size-jumbo-7;
+	}
+	@media (max-width: @screen-xs) {
+		font-size: @font-size-jumbo-7;
+	}
+}
+.text-jumbo-heavy-sm {
+	font-family: SinaNova, serif;
+	font-size: @font-size-jumbo-6;
+	@media (min-width: @screen-md) and (max-width: @screen-lg) {
+		font-size: @font-size-jumbo-7;
+	}
+	@media (min-width: @screen-sm) and (max-width: @screen-md) {
+		font-size: @font-size-jumbo-8;
+	}
+	@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+		font-size: @font-size-jumbo-9;
+	}
+	@media (max-width: @screen-xs) {
+		font-size: @font-size-jumbo-10;
+	}
+}
+/** Default text configuration */
+.text-light() {
+	font-family: "Roboto Light";
 	letter-spacing: floor((@font-size-base * 0.15));
 }
+.text-dark() {
+	.text-light();
+	font-weight: bold;
+}
+.text-cursive() {
+	font-family: "SinaNova";
+}
+.generate-text-light(@n, @i:1) when (@i <= @n) {
+	@font-size-gen-eqn: "@{font-size-var}@{i}";
+	.text-light-@{i} {
+		font-family: "Roboto Light";
+		letter-spacing: floor((@font-size-base * 0.15));
+		font-size: @@font-size-gen-eqn;
+	}
+	.generate-text-light(@n, @i+1);
+}
+.generate-text-light(6);
+/** Text size configuraion for light font */
+// .text-light-1 {
+// 	.text-light();
+// 	// font-size: @font-size-1;
+// }
+// .text-light-2 {
+// 	.text-light();
+// 	font-size: @font-size-2;
+// }
+// .text-light-3 {
+// 	.text-light();
+// 	font-size: @font-size-3;
+// }
+// .text-light-4 {
+// 	.text-light("4");
+// 	font-size: @font-size-4;
+// }
+// .text-light-5 {
+// 	.text-light();
+// 	font-size: @font-size-5;
+// }
+// .text-light-6 {
+// 	.text-light();
+// 	font-size: @font-size-6;
+// }
+/** Text size configuraion for dark font */
+.text-dark-1 {
+	.text-dark();
+	font-size: @font-size-1;
+}
+.text-dark-2 {
+	.text-dark();
+	font-size: @font-size-2;
+}
+.text-dark-3 {
+	.text-dark();
+	font-size: @font-size-3;
+}
+.text-dark-4 {
+	.text-dark();
+	font-size: @font-size-4;
+}
+.text-dark-5 {
+	.text-dark();
+	font-size: @font-size-5;
+}
+.text-dark-6 {
+	.text-dark();
+	font-size: @font-size-6;
+}
+/** Text size configuraion for cursive font */
+.text-cursive-1 {
+	.text-cursive();
+	font-size: @font-size-1;
+}
+.text-cursive-2 {
+	.text-cursive();
+	font-size: @font-size-2;
+}
+.text-cursive-3 {
+	.text-cursive();
+	font-size: @font-size-3;
+}
+.text-cursive-4 {
+	.text-cursive();
+	font-size: @font-size-4;
+}
+.text-cursive-5 {
+	.text-cursive();
+	font-size: @font-size-5;
+}
+.text-cursive-6 {
+	.text-cursive();
+	font-size: @font-size-6;
+}
+// .text-light-sm {
+// 	font-family: "SinaNova";
+// 	letter-spacing: floor((@font-size-base * 0.1));
+// 	font-size: @font-size-4;
+// 	font-weight: normal;
+// }
+// .text-jumbo-cursive() {
+// 	font-family: "SinaNova";
+// 	letter-spacing: floor((@font-size-base * 0.1));
+// }
+// .text-jumbo-cursive-lg {
+// 	.text-jumbo-cursive;
+// 	font-size: @font-size-2;
+// }
+// .text-jumbo-cursive-md {
+// 	.text-jumbo-cursive;
+// 	font-size: @font-size-3;
+// }
+// .text-regular {
+// 	font-family: "GenBas Regular";
+// 	font-size: @font-size-4;
+// 	text-align: justify;
+// 	word-spacing: ceil((@font-size-base * 0.3));
+// 	letter-spacing: ceil((@font-size-base * 0.01));
+// }
+/** Me Page */
+.me {
+	& .jumbo-text {
+		font-family: "Roboto Dark";
+		font-size: @font-size-jumbo-1;
+	}
+}
+/** Me Page End*/
