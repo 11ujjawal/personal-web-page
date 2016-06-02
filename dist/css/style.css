@@ -65,26 +65,15 @@
   height: 100vh;
   width: 100vw;
 }
-.viewport-eighty {
-  height: 80vh;
-  width: 100vw;
-}
 .wrapper {
   height: inherit;
   padding: 5px 0 20px;
   width: 80vw;
 }
-.wrap-content {
-  flex: 0.0001;
-  white-space: nowrap;
-}
-.display-content {
-  flex: 1000;
-  white-space: wrap;
-}
 body {
   height: 100vh;
   width: 100vw;
+  color: #193441;
   background-color: #FCFFF5;
 }
 hr {
@@ -93,32 +82,49 @@ hr {
 }
 /** End common setting */
 /** Index Page  */
-.index-footer {
+#index footer {
   height: 20vh;
   width: 100vw;
   position: fixed;
   margin-top: -20vh;
 }
-.navbar-brand {
+#index .navbar-brand {
   color: #193441;
   opacity: 0.8;
 }
-.navbar-brand:focus,
-.navbar-brand:hover {
+#index .navbar-brand:focus,
+#index .navbar-brand:hover {
   color: #0b171c;
   background-color: #ffffff !important;
 }
-.navbar-brand > *:hover {
+#index .navbar-brand > *:hover {
   transform: scale(1.2);
   transition: transform 0.3s;
   opacity: 1;
 }
 /** End Index Page */
 /** Me Page */
+#me > #close {
+  color: #0b171c;
+  text-shadow: 0px 0px 2px #438cb0;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
 #me > .section-left,
 #me .section-right {
   height: inherit;
   width: 50vw;
+}
+#me > .section-left > nav {
+  margin-top: -5vh;
+}
+#me > .section-left > .home {
+  color: #193441;
+  position: fixed;
+  left: 25vw;
+  bottom: 20px;
+  transform: translate(-50%, 0);
 }
 #me > .section-right {
   color: #ADD58B;
@@ -147,20 +153,13 @@ hr {
   white-space: normal;
 }
 #me > .section-right > #mind {
-  background-color: red;
+  background-color: #375D81;
 }
 #me > .section-right > #body {
-  background-color: pink;
+  background-color: #B0CC99;
 }
 #me > .section-right > #soul {
-  background-color: orange;
-}
-#me .navbar {
-  margin-top: -4vh;
-}
-#me a:hover,
-#me :active {
-  text-decoration: none;
+  background-color: #F6E8B1;
 }
 /** End Me Page */
 @font-face {

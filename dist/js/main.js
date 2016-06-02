@@ -1,4 +1,7 @@
-// $('#nav-mind').on('click', function() {
-// 	$('me default').addClass('hide').removeClass('show');
-// 	$('me mind').addClass('show').removeClass('hide');
-// });
+
+$('#me #close').on('click', function() {
+    var hash = window.location.hash;
+    if (hash === '#default') {
+        this.setAttribute('href', '../../index.html');
+    }
+});

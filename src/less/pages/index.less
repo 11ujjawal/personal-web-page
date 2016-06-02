@@ -1,0 +1,24 @@
+/** Index Page  */
+#index {
+	& footer {
+		height: 20vh;
+		width: 100vw;
+		position: fixed;
+		margin-top: -20vh;
+	}
+	& .navbar-brand {
+		color: @text-base;
+		opacity: 0.8;
+		&:focus,
+		&:hover {
+			color: darken(@text-base, 10%);
+			background-color: lighten(@bg-base, 20%) !important;
+		}
+		& > *:hover {
+			transform: scale(1.2);
+			transition: transform 0.3s;
+			opacity: 1;
+		}
+	}
+}
+/** End Index Page */

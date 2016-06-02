@@ -1,0 +1,64 @@
+/** Me Page */
+#me {
+	& > #close {
+		color: darken(@text-base, 10%);
+		text-shadow: 0px 0px 2px lighten(@text-base, 30%);
+		position: fixed;
+		top: 10px;
+		right: 10px;
+	}
+	& > .section-left,
+	.section-right {
+		height: inherit;
+		width: @viewport-width/2;
+	}
+	& > .section-left {
+		& > nav {
+			margin-top: -5vh;
+		}
+		& > .home {
+			color: @text-base;
+			position: fixed;
+			left: @viewport-width/4;
+			bottom: 20px;
+			transform: translate(-50%, 0);
+		}
+	}
+	& > .section-right {
+		color: @text-shade-3;
+		background-color: darken(@text-base, 5%);
+		& > * {
+			width: 100%;
+			height: inherit;
+			transition: all 500ms linear;
+		}
+		& > #default, #mind, #body, #soul {
+			flex: 0.0001;
+			padding: 0px;
+			overflow: hidden;
+			white-space: nowrap;
+			&:target {
+				flex: 1000;
+				padding: 20px;
+				white-space: normal;
+			}
+		}
+		& > #mind {
+			background-color: @bg-shade-7;
+		}
+		& > #body {
+			background-color: @bg-shade-8;
+		}
+		& > #soul {
+			background-color: @bg-shade-9;
+		}
+		& > #default >.btn-resume {
+			padding: 0.5em;
+			color:black;
+			background-color: @darken(@text-base, 5%);
+			border: 2px solid lighten(@text-base, 20%);
+			border-radius: 50%;
+		}
+	}
+}
+/** End Me Page */

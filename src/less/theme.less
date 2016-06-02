@@ -3,25 +3,14 @@
 	height: @viewport-height;
 	width: @viewport-width;
 }
-.viewport-eighty {
-	height: @viewport-height * 0.8;
-	width: @viewport-width;
-}
 .wrapper {
 	height: inherit;
 	padding: 5px 0 20px;
 	width: @viewport-width * 0.8;
 }
-.wrap-content {
-	flex: 0.0001;
-	white-space: nowrap;
-}
-.display-content {
-	flex: 1000;
-	white-space: wrap;
-}
 body {
 	.viewport-default();
+	color: @text-base;
 	background-color: @bg-base;
 }
 hr {
@@ -29,73 +18,3 @@ hr {
 	height: ceil((@font-size-base * 0.15));
 }
 /** End common setting */
-/** Index Page  */
-.index-footer {
-	height: 20vh;
-	width: 100vw;
-	position: fixed;
-	margin-top: -20vh;
-}
-.navbar-brand {
-	color: @text-base;
-	opacity: 0.8;
-	&:focus,
-	&:hover {
-		color: darken(@text-base, 10%);
-		background-color: lighten(@bg-base, 20%) !important;
-	}
-	& > *:hover {
-		transform: scale(1.2);
-		transition: transform 0.3s;
-		opacity: 1;
-	}
-}
-/** End Index Page */
-/** Me Page */
-#me {
-	& > .section-left,
-	.section-right {
-		height: inherit;
-		width: @viewport-width/2;
-	}
-	& > .section-right {
-		color: @text-shade-3;
-		background-color: darken(@text-base, 5%);
-		& > * {
-			width: 100%;
-			height: inherit;
-			transition: all 500ms linear;
-		}
-		& > #default, #mind, #body, #soul {
-			flex: 0.0001;
-			padding: 0px;
-			overflow: hidden;
-			white-space: nowrap;
-			&:target {
-				flex: 1000;
-				padding: 20px;
-				white-space: normal;
-			}
-		}
-		& > #default {
-		}
-		& > #mind {
-			background-color: red;
-		}
-		& > #body {
-			background-color: pink;
-		}
-		& > #soul {
-			background-color: orange;
-		}
-	}
-	& .navbar {
-		margin-top: -4vh;
-	}
-	& a:hover,
-	:active {
-		text-decoration: none;
-	}
-	& > .section-right > #mind {}
-}
-/** End Me Page */
