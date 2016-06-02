@@ -1,0 +1,32 @@
+@font-size: @font-size-jumbo-1, @font-size-jumbo-2, @font-size-jumbo-3, @font-size-jumbo-4, @font-size-jumbo-5, @font-size-jumbo-6, @font-size-jumbo-7, @font-size-jumbo-8, @font-size-jumbo-9, @font-size-jumbo-10;
+
+.generate-text(@font, @type, @lSpace, @wSpace, @n, @i:1) when (@i <= @n) {
+	@font-size-gen-eqn: "@{font-size-var}@{i}";
+	.text-@{type}-@{i} {
+		font-family: @font;
+		font-size: @@font-size-gen-eqn;
+		word-spacing: floor((@font-size-base * @wSpace));
+		letter-spacing: floor((@font-size-base * @lSpace));
+	}
+	.generate-text(@font, @type, @lSpace, @wSpace, @n, @i+1);
+}
+
+.generate-jumbo-text(@font, @type, @spacing, @n) {
+	.text-jumbo-@{type}-@{n} {
+		font-family: @font;
+		letter-spacing: @spacing;
+		font-size: extract(@font-size, @n);
+		@media (min-width: @screen-md) and (max-width: @screen-lg) {
+			font-size: extract(@font-size, @n+1);
+		}
+		@media (min-width: @screen-sm) and (max-width: @screen-md) {
+			font-size: extract(@font-size, @n+2);
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: extract(@font-size, @n+3);
+		}
+		@media (max-width: @screen-xs) {
+			font-size: extract(@font-size, @n+4);
+		}
+	}
+}
